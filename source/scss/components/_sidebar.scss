@@ -42,7 +42,51 @@ aside {
   }
 
   .navbar-menu {
+    .nav-link {
+      .img {
+        width         : 50px;
+        height        : 50px;
+        border-radius : 12px;
+        background    : #ECEFF7;
+        margin-bottom : 16px;
+        text-align    : center;
+        position : relative;
+        overflow : hidden;
+        transition: $transition;
+        &:after{
+          position : absolute;
+          content: url("../images/sidebar/intersect.png");
+          top: 0;
+          right : 0;
+          transform : scale(0);
+          transition: all .5s;
+        }
+      }
 
+      text-align     : center;
+      text-transform : capitalize;
+      font-size      : 12px;
+      margin-bottom  : 16px;
+      font-weight    : 400;
+      transition: $transition;
+
+      &.active,&:hover{
+        .img {
+          background    : $primary;
+          box-shadow: 0 10px 20px 0 #585CE540;
+          &:after{
+            transform : scale(1);
+          }
+        }
+        .text-01-gray{
+          color: $secondary;
+        }
+      }
+
+    }
+    .divider{
+      margin-bottom : 60px;
+    }
   }
 
   .sidebar-bottom {
@@ -81,22 +125,24 @@ aside {
       font-weight   : 400;
       font-size     : 12px;
       line-height   : 16px;
-      position : relative;
+      position      : relative;
+
       &:after {
-        position: absolute;
-        content: '';
-        width: calc(100% - 24px);
-        height: 100%;
-        left: 12px;
-        top: 6px;
-        background: #CFC8FF;
-        border-radius: 12px;
-        z-index: -1;
-        opacity : 50%;
-        transition: $transition;
+        position      : absolute;
+        content       : '';
+        width         : calc(100% - 24px);
+        height        : 100%;
+        left          : 12px;
+        top           : 6px;
+        background    : #CFC8FF;
+        border-radius : 12px;
+        z-index       : -1;
+        opacity       : 50%;
+        transition    : $transition;
       }
-      &:hover{
-        &:after{
+
+      &:hover {
+        &:after {
           opacity : 1;
         }
       }

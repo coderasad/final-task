@@ -52,6 +52,9 @@ svg {
 .flex-col {
   flex-direction : column;
 }
+.justify-between{
+  justify-content: space-between;
+}
 
 .item-center {
   display         : flex;
