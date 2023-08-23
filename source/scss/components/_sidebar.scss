@@ -1,0 +1,32 @@
+aside {
+  width        : $sidebar-width;
+  height       : 100vh;
+  z-index      : 1002;
+  border-right : 1px solid $border;
+  position     : fixed;
+  top          : 0;
+  transition   : $transition;
+  display        : flex;
+  flex-direction : column;
+  justify-content: space-between;
+
+  .navbar-brand-logo{
+    height : $top-bar-height;
+    border-bottom : 1px solid $border;
+  }
+
+  .navbar-menu {
+    min-height     : 400px;
+    overflow-y     : auto;
+  }
+
+  .sidebar-bottom {
+    margin-top : 24px;
+  }
+
+  li a{
+    display : block;;
+    margin-bottom : 50px;
+  }
+
+}

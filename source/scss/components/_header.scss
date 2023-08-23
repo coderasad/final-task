@@ -1,0 +1,9 @@
+#page-top-bar {
+  position: fixed;
+  left: $sidebar-width;
+  top: 0;
+  height: $top-bar-height;
+  width : 100%;
+  z-index: 1002;
+  border-bottom: 1px solid $border;
+}

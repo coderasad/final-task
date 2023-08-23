@@ -1,0 +1,54 @@
+* {
+  margin     : 0;
+  padding    : 0;
+  box-sizing : border-box;
+}
+
+body {
+  font-family      : $font-sans;
+  background-color : $white;
+  color            : $text-dark;
+  font-size        : 13px;
+}
+
+a {
+  text-decoration : none;
+  transition      : 0.4s;
+}
+
+ul {
+  list-style : none;
+}
+
+img {
+  max-width : 100%;
+}
+
+svg {
+  vertical-align : bottom;
+}
+
+.w-100{
+  width : 100%;
+}
+.h-100{
+  height : 100%;
+}
+
+.flex {
+  display : flex;
+}
+.flex-col{
+  flex-direction: column;
+}
+
+.item-center {
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+}
+
+/*
+.orange path{
+  fill: orange;
+}*/

@@ -1,0 +1,8 @@
+main{
+  margin-left: $sidebar-width;
+  padding-top : $top-bar-height;
+  display : flex;
+  .main-content{
+    width : 100%;
+  }
+}
