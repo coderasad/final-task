@@ -6,27 +6,101 @@ aside {
   position     : fixed;
   top          : 0;
   transition   : $transition;
-  display        : flex;
-  flex-direction : column;
-  justify-content: space-between;
 
-  .navbar-brand-logo{
-    height : $top-bar-height;
+  .navbar-brand-logo {
+    height        : $top-bar-height;
     border-bottom : 1px solid $border;
+
+    a {
+      color          : $primary;
+      font-size      : 19px;
+      font-weight    : 700;
+      line-height    : 25px;
+      font-family    : $font-sans;
+      text-transform : uppercase;
+
+      span {
+        background      : $primary;
+        color           : $white;
+        font-size       : 16px;
+        display         : inline-flex;
+        align-items     : center;
+        justify-content : center;
+        width           : 30px;
+        height          : 30px;
+        border-radius   : 50%;
+      }
+    }
+  }
+
+  .app-menu {
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-between;
+    height          : calc(100vh - $top-bar-height);
+    overflow-y      : auto;
   }
 
   .navbar-menu {
-    min-height     : 400px;
-    overflow-y     : auto;
+
   }
 
   .sidebar-bottom {
     margin-top : 24px;
-  }
 
-  li a{
-    display : block;;
-    margin-bottom : 50px;
+    div {
+      margin-bottom : 4px;
+    }
+
+    p {
+      margin-bottom : 12px;
+    }
+
+    .progress {
+      height        : 8px;
+      background    : #F6F9FF;
+      border-radius : 6px;
+
+      span {
+        background    : #FF6E91;
+        width         : 80%;
+        height        : 100%;
+        display       : block;
+        border-radius : 6px;
+      }
+    }
+
+    .add-space-btn {
+      background    : $primary;
+      color         : $white;
+      padding       : 14px 0;
+      text-align    : center;
+      display       : block;
+      margin-top    : 60px;
+      border-radius : 12px;
+      font-weight   : 400;
+      font-size     : 12px;
+      line-height   : 16px;
+      position : relative;
+      &:after {
+        position: absolute;
+        content: '';
+        width: calc(100% - 24px);
+        height: 100%;
+        left: 12px;
+        top: 6px;
+        background: #CFC8FF;
+        border-radius: 12px;
+        z-index: -1;
+        opacity : 50%;
+        transition: $transition;
+      }
+      &:hover{
+        &:after{
+          opacity : 1;
+        }
+      }
+    }
   }
 
 }
