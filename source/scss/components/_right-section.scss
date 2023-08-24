@@ -1,4 +1,72 @@
-.layout-right-side{
-  width: $right-section-width;
-  flex-shrink: 0;
+.layout-right-side {
+  width       : $right-section-width;
+  flex-shrink : 0;
+
+  .shared-folders {
+    img {
+      background : #DEE1E6;
+      padding    : 10px;
+    }
+  }
+
+  .invite-friend-section {
+    border        : 1px dashed #D0C9FF;
+    border-radius : 10px;
+    background    : #F6F4FF;
+    min-height    : 126px;
+    margin-top    : 48px;
+    position      : relative;
+
+    &:hover {
+      .inner-content {
+        top  : 0;
+        left : 0;
+      }
+    }
+
+    .inner-content {
+      background-image    : url(/images/invite-bg.png);
+      background-color    : #51459E;
+      background-repeat   : no-repeat;
+      background-position : right;
+      padding             : 20px;
+      border-radius       : 10px;
+      position            : absolute;
+      width               : 100%;
+      height              : 100%;
+      top                 : -33px;
+      left                : -33px;
+      transition          : $transition;
+
+
+      h4 {
+        font-size     : 16px;
+        line-height   : 21px;
+        margin-bottom : 10px;
+        color         : $white;
+        font-weight   : 400;
+      }
+
+      a {
+        display       : inline-block;
+        font-size     : 14px;
+        line-height   : 21px;
+        background    : #84E8F4;
+        padding       : 8px 20px;
+        border-radius : 5px;
+      }
+    }
+  }
+
+  //USAGE STATS
+  .usage-stats-section{
+    margin-bottom : 42px;
+
+    td{
+      vertical-align: bottom;
+      text-align: center;
+    }
+  }
+
+
 }

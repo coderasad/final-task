@@ -121,28 +121,100 @@ main {
     }
   }
 
-  /*RECENTLY UPLOADED*/
+  /*RECENTLY-UPLOADED-SECTION*/
   .recently-upload-section {
     gap : 18px;
-    >div{
-      width : 50%;
+
+    > div {
+      width : 45%;
     }
 
     .file-manager {
-
-      .flex-wrap{
-        gap: 26px;
+      .flex-wrap {
+        gap : 26px;
       }
-      .item{
-        background : #EBEDFB;
-        border-radius: 10px;
-        padding : 14px;
-        min-width : 130px;
-        .text-secondary{
-          font-size: 8px;
+
+      .item {
+        background    : #EBEDFB;
+        border-radius : 10px;
+        padding       : 14px;
+        width         : 130px;
+        transition    : $transition;
+
+        &:hover {
+          box-shadow : $shadow;
+          transform  : translate3d(-4px, -4px, -4px);
+        }
+
+        .text-secondary {
+          font-size  : 8px;
+          margin-top : 4px;
+        }
+
+        img {
+          width         : 18px;
+          height        : 18px;
+          margin-bottom : 4px;
         }
 
       }
+
+      .btn-file-manager {
+        display       : block;
+        text-align    : center;
+        margin-top    : 24px;
+        font-size     : 14px;
+        line-height   : 21px;
+        background    : #DEE1E6;
+        border-radius : 5px;
+        padding       : 10px;
+        transition    : $transition;
+
+        &:hover {
+          box-shadow : $shadow;
+        }
+      }
     }
   }
+
+}
+
+.recently-upload {
+  .group-item {
+    img {
+      width         : 44px;
+      height        : 44px;
+      border-radius : 10px;
+      margin-right  : 16px;
+      object-fit    : cover;
+      transition    : $transition;
+    }
+
+    > .justify-between {
+      height        : 60px;
+      border-radius : 10px;
+      overflow      : hidden;
+      transition    : $transition;
+
+      .fs-10 {
+        margin-top : 4px;
+      }
+
+      &:hover {
+        box-shadow    : $shadow;
+        padding-right : 8px;
+
+        img {
+          margin-left : 8px;
+        }
+      }
+    }
+  }
+}
+
+.title {
+  font-size     : 18px;
+  line-height   : 27px;
+  font-weight   : 700;
+  margin-bottom : 20px;
 }
