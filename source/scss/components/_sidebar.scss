@@ -2,7 +2,6 @@ aside {
   width        : $sidebar-width;
   height       : 100vh;
   z-index      : 1002;
-  border-right : 1px solid $border;
   position     : fixed;
   top          : 0;
   transition   : $transition;
@@ -39,6 +38,7 @@ aside {
     justify-content : space-between;
     height          : calc(100vh - $top-bar-height);
     overflow-y      : auto;
+    border-right : 1px solid $border;
   }
 
   .navbar-menu {

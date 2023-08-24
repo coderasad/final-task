@@ -1,9 +1,74 @@
 #page-top-bar {
-  position: fixed;
-  left: $sidebar-width;
-  top: 0;
-  height: $top-bar-height;
-  width : 100%;
-  z-index: 1002;
-  border-bottom: 1px solid $border;
+  position        : fixed;
+  left            : $sidebar-width;
+  top             : 0;
+  height          : $top-bar-height;
+  width           : calc(100% - $sidebar-width);
+  z-index         : 1002;
+  border-bottom   : 1px solid $border;
+  align-items     : center;
+  justify-content : space-between;
+  gap             : 24px;
+  font-family     : $font-sans;
+  background : #fff;
+
+  .input-group {
+    border        : 1px solid $input-border;
+    border-radius : 10px;
+    padding       : 20px 24px;
+    align-items   : center;
+    margin-right  : 16px;
+
+    &.search {
+      width : 480px;
+    }
+
+    &.filter {
+      width : 216px;
+    }
+
+    input, select {
+      border      : none;
+      font-family : inherit;
+      width       : 100%;
+      font-size   : 15px;
+    }
+
+    input {
+      margin-left : 18px;
+    }
+
+  }
+
+  .notification {
+    margin-right : 40px;
+    position     : relative;
+    cursor       : pointer;
+
+    &:after {
+      position      : absolute;
+      content       : "";
+      top           : -1px;
+      right         : 0;
+      width         : 5px;
+      height        : 5px;
+      border        : 2px solid $white;
+      background    : #FF6E91;
+      border-radius : 50%;
+    }
+  }
+
+  .user-dropdown {
+    cursor      : pointer;
+    align-items : center;
+    gap         : 10px;
+
+    img {
+      width         : 46px;
+      height        : 46px;
+      border-radius : 50%;
+    }
+
+  }
+
 }
