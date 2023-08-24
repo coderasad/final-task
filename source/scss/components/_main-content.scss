@@ -5,7 +5,8 @@ main {
 
   .main-content {
     width : 100%;
-    .title{
+
+    .title {
       font-size     : 18px;
       line-height   : 27px;
       font-weight   : 700;
@@ -15,8 +16,9 @@ main {
 
   /*FILE-SECTION*/
   .file-section {
-    flex-wrap: wrap;
-    gap: 25px;
+    flex-wrap : wrap;
+    gap       : 25px;
+
     .item {
       padding       : 20px;
       width         : 190px;
@@ -46,36 +48,101 @@ main {
     .documents {
       background : #F5FFFC;
       box-shadow : 0px 1.8518518209457397px 3.1481480598449707px 0px rgba(103, 207, 236, 0.0169), 0px 8.148148536682129px 6.518518447875977px 0px rgba(103, 207, 236, 0.0275), 0px 20px 13px 0px rgba(103, 207, 236, 0.035), 0px 38.51852035522461px 25.481481552124023px 0px rgba(103, 207, 236, 0.0425), 0px 64.81481170654297px 46.85185241699219px 0px rgba(103, 207, 236, 0.0531), 0px 100px 80px 0px rgba(103, 207, 236, 0.07);
-      path{
-        fill: #2FE6C8;
+
+      path {
+        fill : #2FE6C8;
       }
     }
 
     .music {
       background : #FFF9F0;
-      box-shadow: 0px 1.8518518209457397px 3.1481480598449707px 0px #FD834202,0px 8.148148536682129px 6.518518447875977px 0px #FD834204,0px 20px 13px 0px #FD834205,0px 38.51852035522461px 25.481481552124023px 0px #FD834206,0px 64.81481170654297px 46.85185241699219px 0px #FD834208,0px 100px 80px 0px #FD83420A;
+      box-shadow : 0px 1.8518518209457397px 3.1481480598449707px 0px #FD834202, 0px 8.148148536682129px 6.518518447875977px 0px #FD834204, 0px 20px 13px 0px #FD834205, 0px 38.51852035522461px 25.481481552124023px 0px #FD834206, 0px 64.81481170654297px 46.85185241699219px 0px #FD834208, 0px 100px 80px 0px #FD83420A;
 
-      path{
-        fill: #FDBC64;
+      path {
+        fill : #FDBC64;
       }
     }
 
     .images {
       background : #FFF5F5;
-      box-shadow: 0px 1.8518518209457397px 3.1481480598449707px 0px #FF7D7D04,0px 8.148148536682129px 6.518518447875977px 0px #FF7D7D07,0px 20px 13px 0px #FF7D7D09,0px 38.51852035522461px 25.481481552124023px 0px #FF7D7D0B,0px 64.81481170654297px 46.85185241699219px 0px #FF7D7D0E,0px 100px 80px 0px #FF7D7D12;
+      box-shadow : 0px 1.8518518209457397px 3.1481480598449707px 0px #FF7D7D04, 0px 8.148148536682129px 6.518518447875977px 0px #FF7D7D07, 0px 20px 13px 0px #FF7D7D09, 0px 38.51852035522461px 25.481481552124023px 0px #FF7D7D0B, 0px 64.81481170654297px 46.85185241699219px 0px #FF7D7D0E, 0px 100px 80px 0px #FF7D7D12;
 
-      path{
-        fill: #FF7F5C;
+      path {
+        fill : #FF7F5C;
       }
     }
   }
 
 
   /*QUICK-ACCESS-SECTION*/
-  .quick-access-section{
-      .item{
-        background : #F5F5F5;
-        border-radius: 15px;
+  .quick-access-section {
+    margin-bottom : 60px;
+    font-family   : $font-sans;
+    cursor        : pointer;
+
+    .flex {
+      gap : 18px;
+    }
+
+    .item {
+      width         : calc(100% / 3);
+      border-radius : 15px;
+      position      : relative;
+      overflow      : hidden;
+
+
+      .img {
+        img {
+          transition : $transition;
+          width      : 100%;
+        }
       }
+
+      .item-center {
+        position   : absolute;
+        bottom     : 0;
+        left       : 0;
+        width      : 100%;
+        background : #F5F5F5;
+        padding    : 20px 0;
+
+        img {
+          margin-right : 10px;
+        }
+      }
+
+      &:hover {
+        .img {
+          img {
+            transform : scale(1.1);
+          }
+        }
+      }
+    }
+  }
+
+  /*RECENTLY UPLOADED*/
+  .recently-upload-section {
+    gap : 18px;
+    >div{
+      width : 50%;
+    }
+
+    .file-manager {
+
+      .flex-wrap{
+        gap: 26px;
+      }
+      .item{
+        background : #EBEDFB;
+        border-radius: 10px;
+        padding : 14px;
+        min-width : 130px;
+        .text-secondary{
+          font-size: 8px;
+        }
+
+      }
+    }
   }
 }
