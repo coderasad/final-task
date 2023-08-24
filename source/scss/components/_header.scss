@@ -10,7 +10,7 @@
   justify-content : space-between;
   gap             : 24px;
   font-family     : $font-sans;
-  background : #fff;
+  background      : #fff;
 
   .input-group {
     border        : 1px solid $input-border;
@@ -44,6 +44,7 @@
     margin-right : 40px;
     position     : relative;
     cursor       : pointer;
+    flex-shrink  : 0;
 
     &:after {
       position      : absolute;

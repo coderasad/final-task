@@ -68,7 +68,9 @@ svg {
   align-items     : center;
   justify-content : center;
 }
-
+.dropdown-toggle{
+  cursor : pointer;
+}
 //FONT-SIZE
 .fw-500 {
   font-weight : 500;
@@ -115,6 +117,7 @@ svg {
 .text-01-gray{
   color: $text-01-gray
 }
+
 
 
 /*

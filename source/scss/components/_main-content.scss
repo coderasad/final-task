@@ -4,7 +4,7 @@ main {
   display     : flex;
 
   .main-content {
-    width : 100%;
+    width    : 100%;
     overflow : hidden;
 
     .title {
@@ -33,6 +33,13 @@ main {
 
       .text-light {
         font-size : 12px;
+      }
+
+      img {
+        cursor   : pointer;
+        position : absolute;
+        right    : -10px;
+        padding  : 0 10px;
       }
     }
 
@@ -185,6 +192,14 @@ main {
           box-shadow : $shadow;
         }
       }
+
+      .dropdown-item {
+        top   : 26px;
+        right : 0;
+        &.show {
+          top   : 16px;
+        }
+      }
     }
   }
 
@@ -239,4 +254,36 @@ main {
 
 #scroll-container::-webkit-scrollbar {
   display : none;
+}
+
+.relative {
+  position : relative;
+}
+
+.dropdown-item {
+  position      : absolute;
+  width         : 100%;
+  max-width     : 180px;
+  height        : auto;
+  top           : 6px;
+  right         : 10px;
+  padding       : 12px;
+  border-radius : 10px;
+  opacity       : 0;
+  visibility    : hidden;
+  background    : $white;
+  box-shadow    : 0 0 10px #00000050;
+  transition    : $transition;
+
+  &.show {
+    opacity    : 1;
+    visibility : visible;
+    top        : -6px;
+  }
+
+  a {
+    display       : block;
+    color         : $text-dark;
+    margin-bottom : 8px;
+  }
 }

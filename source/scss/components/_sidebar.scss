@@ -39,6 +39,43 @@ aside {
     height          : calc(100vh - $top-bar-height);
     overflow-y      : auto;
     border-right : 1px solid $border;
+
+    &::-webkit-scrollbar{
+      width: 6px;
+      height: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: transparent;
+      border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-corner {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-button {
+      display: none;
+    }
+
+    &:hover{
+      &::-webkit-scrollbar-thumb {
+        background: #51459e80;
+      }
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      &::-webkit-scrollbar-corner {
+        background: #f1f1f1;
+      }
+    }
+
+
   }
 
   .navbar-menu {
