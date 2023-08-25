@@ -2,6 +2,14 @@ main {
   margin-left : $sidebar-width;
   padding-top : $top-bar-height;
   display     : flex;
+  transition: $transition;
+  @include desktop-lg{
+    flex-direction: column;
+  }
+  @include desktop{
+    margin-left : 0;
+    padding-top : $top-bar-height-sm;
+  }
 
   .main-content {
     width    : 100%;
@@ -100,6 +108,9 @@ main {
 
     .flex {
       gap : 18px;
+      @include mobile{
+        flex-wrap: wrap;
+      }
     }
 
     .item {
@@ -107,6 +118,13 @@ main {
       border-radius : 15px;
       position      : relative;
       overflow      : hidden;
+
+      @include mobile{
+        width : calc(50% - 18px);
+      }
+      @include mobile-xs{
+        width : 100%;
+      }
 
 
       .img {
@@ -145,10 +163,22 @@ main {
 
     > div {
       width : 45%;
+      @media (min-width: 1200px) and (max-width: 1345px) {
+        width : 100%;
+      }
+    }
+
+    @include mobile{
+      flex-direction: column;
+      >div{
+        width : 100%;
+      }
     }
 
     .file-manager {
-      .flex-wrap {
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2,minmax(130px,1fr));
         gap : 26px;
       }
 
@@ -156,7 +186,7 @@ main {
         background    : #EBEDFB;
         border-radius : 10px;
         padding       : 14px;
-        width         : 130px;
+        //min-width         : 130px;
         transition    : $transition;
 
         &:hover {

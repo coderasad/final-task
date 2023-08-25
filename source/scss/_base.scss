@@ -63,6 +63,9 @@ svg {
 .flex-wrap{
   flex-wrap: wrap;
 }
+.shrink{
+  flex-shrink: 0;
+}
 .item-center {
   display         : flex;
   align-items     : center;

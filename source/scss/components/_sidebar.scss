@@ -3,12 +3,19 @@ aside {
   height     : 100vh;
   z-index    : 1002;
   position   : fixed;
+  left       : 0;
   top        : 0;
   transition : $transition;
+  @include desktop{
+    left : - $sidebar-width;
+  }
 
   .navbar-brand-logo {
     height        : $top-bar-height;
     border-bottom : 1px solid $border;
+    @include desktop{
+      height        : $top-bar-height-sm;
+    }
 
     a {
       color          : $primary;
@@ -39,6 +46,9 @@ aside {
     height          : calc(100vh - $top-bar-height);
     overflow-y      : auto;
     border-right    : 1px solid $border;
+    @include desktop{
+      height          : calc(100vh - $top-bar-height-sm);
+    }
 
     &::-webkit-scrollbar {
       width  : 6px;
@@ -110,6 +120,7 @@ aside {
 
       img {
         z-index : 9;
+
         &:last-child {
           display : none;
         }
@@ -206,4 +217,65 @@ aside {
     }
   }
 
+}
+
+.navbar-brand-logo {
+  height        : $top-bar-height;
+  border-bottom : 1px solid $border;
+  @include desktop{
+    height        : $top-bar-height-sm;
+  }
+
+  a {
+    color          : $primary;
+    font-size      : 19px;
+    font-weight    : 700;
+    line-height    : 25px;
+    font-family    : $font-sans;
+    text-transform : uppercase;
+
+    span {
+      background      : $primary;
+      color           : $white;
+      font-size       : 16px;
+      display         : inline-flex;
+      align-items     : center;
+      justify-content : center;
+      width           : 30px;
+      height          : 30px;
+      border-radius   : 50%;
+    }
+  }
+}
+
+.backdrop{
+  position : fixed;
+  width : 100vw;
+  height : 100vh;
+  left : $sidebar-width;
+  top: 0;
+  background: #00000050;
+  visibility: hidden;
+  opacity : 0;
+  transition: $transition;
+  z-index : 1004;
+}
+
+.show {
+  #page-top-bar{
+    left : $sidebar-width;
+    .navbar-brand-logo{
+      display : none;
+    }
+  }
+  aside{
+    left : 0;
+  }
+  main{
+    margin-left: $sidebar-width;
+  }
+  .backdrop{
+    visibility: visible;
+    opacity : 1;
+  }
 }

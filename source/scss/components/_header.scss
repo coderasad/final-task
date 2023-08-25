@@ -11,6 +11,36 @@
   gap             : 24px;
   font-family     : $font-sans;
   background      : #fff;
+  transition      : $transition;
+  @include desktop {
+    left   : 0;
+    width  : 100%;
+    height : $top-bar-height-sm;
+  }
+
+  .side-bar-toggle {
+    display : none;
+    @include desktop {
+      display : block;
+    }
+  }
+  .side-bar-toggle-remove{
+    display : none;
+    margin-left : 12px;
+    @include desktop {
+      display : block;
+    }
+  }
+
+  .navbar-brand-logo {
+    display : none;
+    @include desktop {
+      display       : block;
+      flex-shrink   : 0;
+      height        : auto;
+      border-bottom : 0;
+    }
+  }
 
   .input-group {
     border        : 1px solid $input-border;
@@ -20,11 +50,17 @@
     margin-right  : 16px;
 
     &.search {
-      width : 480px;
+      width : 50%;
     }
 
     &.filter {
-      width : 216px;
+      width : 30%;
+      @include desktop-lg {
+        width : 50%;
+      }
+    }
+    @include desktop{
+      padding : 12px;
     }
 
     input, select {
@@ -68,6 +104,12 @@
       width         : 46px;
       height        : 46px;
       border-radius : 50%;
+    }
+
+    @include desktop {
+      div {
+        display : none;
+      }
     }
 
   }

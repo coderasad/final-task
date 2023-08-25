@@ -40,3 +40,11 @@ navLink.forEach(ele => {
         }
     });
 })
+
+//TOGGLE SIDE BAR
+document.querySelector('.side-bar-toggle').addEventListener('click',()=>{
+    document.body.classList.add("show");
+})
+document.querySelector('.side-bar-toggle-remove').addEventListener('click',()=>{
+    document.body.classList.remove("show");
+})
