@@ -1,3 +1,12 @@
+//TOGGLE SIDE BAR
+const handleToggleSideBar = (name) => document.querySelector(name).addEventListener('click', () => {
+    document.body.classList.toggle("show");
+})
+
+handleToggleSideBar('.side-bar-toggle-remove')
+handleToggleSideBar('.backdrop')
+handleToggleSideBar('.side-bar-toggle')
+
 /*HORIZONTAL SCROLL CONTAINER*/
 const container = document.getElementById('scroll-container');
 let isMouseDown = false;
@@ -25,6 +34,8 @@ container.addEventListener('mousemove', (e) => {
     container.scrollLeft = scrollLeft - walk;
 });
 
+
+
 // DROPDOWN SHOW HIDE
 let navLink = document.querySelectorAll('.dropdown-toggle');
 navLink.forEach(ele => {
@@ -41,17 +52,12 @@ navLink.forEach(ele => {
     });
 })
 
-//TOGGLE SIDE BAR
-document.querySelector('.side-bar-toggle').addEventListener('click',()=>{
-    document.body.classList.add("show");
+window.addEventListener('click',(event)=>{
+    let target = event.target;
+    let targetDiv = document.querySelectorAll('.dropdown-toggle');
+    targetDiv.forEach(item =>{
+        if(!item.contains(target)){
+            item.nextElementSibling.classList.remove('show');
+        }
+    })
 })
- const handleRemove = (name) => document.querySelector(name).addEventListener('click',()=>{
-    document.body.classList.remove("show");
-})
-
-handleRemove('.side-bar-toggle-remove')
-handleRemove('.backdrop')
-/*
-document.querySelector('.backdrop').addEventListener('click',()=>{
-    document.body.classList.remove("show");
-})*/

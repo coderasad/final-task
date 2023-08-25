@@ -112,8 +112,8 @@
       width         : 46px;
       height        : 46px;
       border-radius : 50%;
-      @include desktop{
-        width : 36px;
+      @include desktop {
+        width  : 36px;
         height : 36px;
       }
     }
@@ -122,9 +122,9 @@
       div {
         display : none;
       }
-      .dropdown-item{
+      .dropdown-item {
         display : block;
-        width : 180px;
+        width   : 180px;
       }
     }
 
@@ -137,6 +137,7 @@
 
 
 .side-bar-toggle {
+  cursor  : pointer;
   display : none;
   @include desktop {
     display : block;
@@ -144,6 +145,7 @@
 }
 
 .side-bar-toggle-remove {
+  cursor      : pointer;
   display     : none;
   margin-left : 12px;
   @include desktop {
