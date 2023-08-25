@@ -45,6 +45,13 @@ navLink.forEach(ele => {
 document.querySelector('.side-bar-toggle').addEventListener('click',()=>{
     document.body.classList.add("show");
 })
-document.querySelector('.side-bar-toggle-remove').addEventListener('click',()=>{
+ const handleRemove = (name) => document.querySelector(name).addEventListener('click',()=>{
     document.body.classList.remove("show");
 })
+
+handleRemove('.side-bar-toggle-remove')
+handleRemove('.backdrop')
+/*
+document.querySelector('.backdrop').addEventListener('click',()=>{
+    document.body.classList.remove("show");
+})*/

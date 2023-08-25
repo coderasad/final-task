@@ -254,10 +254,9 @@ aside {
   height : 100vh;
   left : $sidebar-width;
   top: 0;
-  background: #00000050;
+  background: #000000;
   visibility: hidden;
   opacity : 0;
-  transition: $transition;
   z-index : 1004;
 }
 
@@ -276,6 +275,6 @@ aside {
   }
   .backdrop{
     visibility: visible;
-    opacity : 1;
+    opacity : .7;
   }
 }

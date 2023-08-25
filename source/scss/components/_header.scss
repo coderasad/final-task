@@ -17,19 +17,8 @@
     width  : 100%;
     height : $top-bar-height-sm;
   }
-
-  .side-bar-toggle {
-    display : none;
-    @include desktop {
-      display : block;
-    }
-  }
-  .side-bar-toggle-remove{
-    display : none;
-    margin-left : 12px;
-    @include desktop {
-      display : block;
-    }
+  @include mobile {
+    gap : 8px;
   }
 
   .navbar-brand-logo {
@@ -51,6 +40,11 @@
 
     &.search {
       width : 50%;
+
+      @include mobile {
+        width        : 100%;
+        margin-right : 4px;
+      }
     }
 
     &.filter {
@@ -58,8 +52,12 @@
       @include desktop-lg {
         width : 50%;
       }
+      @include mobile {
+        display : none;
+      }
     }
-    @include desktop{
+
+    @include desktop {
       padding : 12px;
     }
 
@@ -93,6 +91,16 @@
       background    : #FF6E91;
       border-radius : 50%;
     }
+
+    @include desktop {
+      margin-right : 16px;
+    }
+
+    .dropdown-item {
+      min-width : 220px;
+      top       : 30px;
+      right     : 0;
+    }
   }
 
   .user-dropdown {
@@ -104,14 +112,41 @@
       width         : 46px;
       height        : 46px;
       border-radius : 50%;
+      @include desktop{
+        width : 36px;
+        height : 36px;
+      }
     }
 
     @include desktop {
       div {
         display : none;
       }
+      .dropdown-item{
+        display : block;
+        width : 180px;
+      }
     }
 
+    .dropdown-item {
+      top : 50px;
+    }
   }
 
+}
+
+
+.side-bar-toggle {
+  display : none;
+  @include desktop {
+    display : block;
+  }
+}
+
+.side-bar-toggle-remove {
+  display     : none;
+  margin-left : 12px;
+  @include desktop {
+    display : block;
+  }
 }
